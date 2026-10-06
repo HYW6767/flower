@@ -1,0 +1,29 @@
+/data
+*.zip
+>> *.tar.gz
+>> 
+>> # 模型权重（★ 222MB 太大，不能进 git）
+>> *.pt
+>> *.pth
+>> *.ckpt
+>> 
+>> # Python
+>> __pycache__/
+>> *.py[cod]
+>> venv/
+>> .venv/
+>> 
+>> # 编辑器
+>> .vscode/
+>> .idea/
+>> .DS_Store
+>> Thumbs.db
+>> 
+>> # 输出
+>> logs/
+>> runs/
+>> docs/*.png
+>> 
+>> # 敏感信息
+>> .env
+>> *.key
