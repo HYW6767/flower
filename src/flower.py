@@ -244,8 +244,7 @@ class FlowerPredictor():
         self.model.to(self.device)
         self.model.eval()
     @torch.no_grad()
-    def pred(self,path):
-        img = Image.open(path)
+    def pred(self,img):
         if self.pre.get("exif_transpose", True):
             img = ImageOps.exif_transpose(img)
         img = img.convert(self.pre.get("color_mode", "RGB"))
