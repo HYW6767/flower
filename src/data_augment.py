@@ -67,9 +67,9 @@ def build_loaders(root="data",batch_size=32,num_workers=0):
     test_ds = datasets.ImageFolder(root / "test",
                                    transform=build_val_transform(),
                                    loader=safe_loader)
-    train_loader = DataLoader(train_ds, batch_size=32, shuffle=True,
-                              num_workers=0, drop_last=True)
-    val_loader = DataLoader(val_ds, batch_size=32, shuffle=False, num_workers=0)
+    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True,
+                              num_workers=num_workers, drop_last=True)
+    val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False, num_workers=num_workers)
     test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False,
                              num_workers=num_workers)
     return train_ds, val_ds, test_ds, train_loader, val_loader, test_loader
